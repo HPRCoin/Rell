@@ -83,8 +83,19 @@
                         <div class="reward text-sm">20000 🪙</div>
                     </div>
                 </div>
+
+                <div class="status"></div>
+
                 <div class="status"></div>
             </div>
+            <div class="task p-5 mb-5 bg-white bg-opacity-10 rounded-lg flex items-center justify-between cursor-pointer transition-opacity duration-500" id="task-2" onclick="completeTask('task-4', 'https://www.youtube.com/@hprcoin')">
+                <div class="task-info flex items-center">
+                    <img src="FaceBook.png" class="w-6 h-6 mr-3" alt="facebook">
+                    <div>
+                        <div class="task-title text-xl">FaceBook</div>
+                        <div class="reward text-sm">20000 🪙</div>
+                    </div>
+                </div>
         </div>
     </div>
     <a href="index.html" class="back-button">Back</a>
@@ -108,7 +119,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            ['task-1', 'task-2', 'task-3'].forEach(taskId => {
+            ['task-1', 'task-2', 'task-3' 'task-4'].forEach(taskId => {
                 if (localStorage.getItem(taskId) === 'completed') {
                     const taskElement = document.getElementById(taskId);
                     taskElement.classList.add('completed');
