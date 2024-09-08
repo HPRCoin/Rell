@@ -67,26 +67,11 @@
                     <p>Multitap</p>
                     <p id="turbo-count">3/3 </p>
                 </div>
-                <div id="full-energy" class="bg-gray-700 bg-opacity-40 p-4 rounded-lg text-center w-1/2 mx-1 cursor-pointer">
-                    <span class="text-2xl">⚡</span>
-                    <p>Energy Limit</p>
-                    <p id="full-energy-count">3/3 </p>
-                </div>
-            </div>
         </div>
 
         <div class="my-4">
             <h2 class="text-xl mb-2 text-right">Speed</h2>
-            <div id="divine-queen" class="bg-gray-700 bg-opacity-40 p-4 rounded-lg mb-2 cursor-pointer">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center">
-                        <span class="text-2xl">👑</span>
-                        <div class="mr-2 text-right">
-                            <p>Bot </p>
-                            <p id="divine-queen-status" class="level-text"></p>
-                        </div>
                     </div>
-                    <div class="text-gray-400">5000</div>
                 </div>
             </div>
             <div id="multi-hit" class="bg-gray-700 bg-opacity-40 p-4 rounded-lg mb-2 cursor-pointer">
@@ -180,12 +165,6 @@
             let increaseRefillSpeedPrice = parseInt(localStorage.getItem('increaseRefillSpeedPrice')) || 100;
             document.getElementById('increase-refill-speed-level').textContent = `Level ${increaseRefillSpeedLevel}`;
             document.getElementById('increase-refill-speed-price').textContent = increaseRefillSpeedPrice;
-
-            // بارگذاری وضعیت ملکه الهی
-            function updateDivineQueenStatus() {
-                const status = localStorage.getItem('divineQueenActive') === 'true' ? 'فعال' : 'Soon';
-                document.getElementById('divine-queen-status').textContent = status;
-            }
 
             // خرید بوستر
             function buyBooster(type) {
